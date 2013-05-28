@@ -21,6 +21,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+gem 'sass'
+# Unsemantic = A CSS framework to get a gridy and responsive interface
+#gem 'unsemantic_rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
