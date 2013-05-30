@@ -1,152 +1,107 @@
-<div class="grid-container">
-  <div class="grid-25">
-		I am 25% wide.
-	</div>
-  <div class="grid-50">
-	  	<div class="grid-container">
-			  <div class="grid-25">
-			    days
-	  		  </div>
-			  <div class="grid-25">
-			   	hours
-	  		  </div>
-	  		  <div class="grid-25">
-			    minutes
-			  </div>
-	  		  <div class="grid-25">
-			  	seconds
-			  </div>
+<header>
+	<div class="ym-wrapper">
+		<div class="ym-wbox">
+
+			<div class="ym-grid">
+				<div class="ym-g25 ym-gl">
+					<div class="ym-gbox">
+						Days
+					</div>
+					<div class="ym-grid" id="daystime">
+						0
+					</div>
+				</div>
+				<div class="ym-g25 ym-gr">
+					<div class="ym-gbox">
+						Hours
+					</div>
+					<div class="ym-grid" id="hourstime">
+						0
+					</div>
+				</div>
+				<div class="ym-g25 ym-gr">
+					<div class="ym-gbox">
+						Minutes
+					</div>
+					<div class="ym-grid" id="minutestime">
+						0
+					</div>
+				</div>
+				<div class="ym-g25 ym-gr">
+					<div class="ym-gbox">
+						Seconds
+					</div>
+					<div class="ym-grid" id="secondstime">
+						0
+					</div>
+				</div>
+			</div>
 		</div>
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
-
-
-<div class="grid-container">
-  <div class="grid-25">
-		I am 25% wide.
 	</div>
-  <div class="grid-50">
-	  	<div class="grid-container">
-			  <div class="grid-25" id="daystime">
-			    0
-	  		  </div>
-			  <div class="grid-25" id="hourstime">
-			   	0
-	  		  </div>
-	  		  <div class="grid-25" id="minutestime">
-			    0
-			  </div>
-	  		  <div class="grid-25" id="secondstime">
-			  	0
-			  </div>
+</header>
+
+<div class="ym-wrapper">
+	<div class="ym-wbox">
+
+		<!-- ************************ Animal killing counters ************************************** -->
+		<!-- ************************ Animal killing counters ************************************** -->
+		<!-- ************************ Animal killing counters ************************************** -->
+
+		<div class="ym-grid">
+			<div class="ym-g50 ym-gl">
+				<div class="ym-gbox">
+					Animals slaughtered since you have opened the website:
+				</div>
+
+				<%
+				i = 0
+				while i < 18
+				%>
+				<div class="ym-grid">
+					<div class="ym-g50 ym-gl">
+						<span id="count<%= i.to_s %>">0</span>
+					</div>
+					<div class="ym-g50 ym-gr">
+						<span> <%= @AnimalsSlaughtered[i].to_s %> </span>
+					</div>
+				</div>
+				<% i = i + 1 %>
+				<% end %>
+
+			</div>
+			<div class="ym-g50 ym-gr">
+				<b>A veure on em poso!!!</b>
+			</div>
 		</div>
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
 
-<div class="grid-container">
-  <div class="grid-25">
-    Rabbits
-  </div>
-  <div class="grid-50">
-		<%= image_tag 'http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/64/Easter-Easter-rabbit-icon.png' %>
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
-
-<div class="grid-container">
-  <div class="grid-25">
-    Cows
-  </div>
-  <div class="grid-50">
-    <%= image_tag 'http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/64/Animals-Cow-icon.png' %>
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
-
-<div class="grid-container">
-  <div class="grid-25">
-    Pigs
-  </div>
-  <div class="grid-50">
-    <%= image_tag 'http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/64/Animals-Pig-icon.png' %>
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
-
-<div class="grid-container">
-  <div class="grid-25">
-    <%= image_tag 'http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/64/Easter-Easter-rabbit-icon.png' %>
-  </div>
-  <div class="grid-50">
-    I am 50% wide.
-  </div>
-  <div class="grid-25">
-    I am 25% wide.
-  </div>
-</div>
-
-<div class="grid-container">
-  <div class="grid-50">
-    Tall content here that
-    would be alongside the
-    50%, 25|25 25|25 rows.
-  </div>
-
-  <!--
-    Nested grid units...
-  -->
-
-  <div class="grid-50 grid-parent">
-    <div class="grid-50">
-      Row 1:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50">
-      Row 1:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50">
-      Row 2:
-        I am 25% (50% of 50%)
-    </div>
-    <div class="grid-50">
-      Row 2:
-        I am 25% (50% of 50%)
-    </div>
-  </div>
-</div>
-
-
-<%
-i = 0
-while i < 18 
-%>
-	<div class="grid-container">
-	  <div class="grid-25">
-			I am 25% wide.
-		</div>
-	  <div class="grid-50">
-		  	<span id="count<%= i.to_s %>">0</span> specific animal <br />
-	  </div>
-	  <div class="grid-25">
-	    I am 25% wide.
-	  </div>
 	</div>
-	<% i = i + 1 %>
-<% end %>
+</div>
 
-<script type="text/javascript">
-		StartKillCounter();
-</script>
+
+<div class="ym-wrapper">
+	<div class="ym-wbox">
+		<h4>Besides</h4>
+		
+		<div class="dummyscreen columnset-4">
+		  <div class="ym-col1">
+		    <div class="ym-cbox">
+		      <p> These are the numbers of animals killed worldwide by the meat, egg, dairy and fish industries since you opened this webpage. </p>
+		    </div>
+		  </div>
+		  <div class="ym-col2">
+		    <div class="ym-cbox">
+		      <p> These numbers do <b>NOT</b> include the many millions of animals killed each year in vivisection laboratories. </p>
+		    </div>
+		  </div>
+		  <div class="ym-col3">
+		    <div class="ym-cbox ym-clearfix">
+		      <p> They do <b>NOT</b> include the millions of dogs and cats killed in animal shelters every year. </p>
+		    </div>
+		    <div class="ym-ie-clearing">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<!-- This JavaScript call fires up (or starts) the animal killing counter -->
+<script type="text/javascript">StartKillCounter();</script>

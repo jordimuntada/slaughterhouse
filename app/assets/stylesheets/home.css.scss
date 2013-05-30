@@ -1,3 +1,25 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+ * Configuring the 100% width of the body
+ */
+body > header { min-width: 760px; }
+
+.ym-wrapper {
+  max-width: 80em;
+}
+
+.ym-wbox { padding: 10px; }
+
+/*
+ * Text columns after the animal killing counter
+*/
+.ym-col1 { width: 25%; } /* left column */
+.ym-col2 { width: 25%; } /* right column */
+.ym-col3 { /* center column */
+  margin: 0 25%;
+  border-left: 1px #ddd solid;
+  border-right: 1px #ddd solid;
+}
