@@ -23,3 +23,12 @@ body > header { min-width: 760px; }
   border-left: 1px #ddd solid;
   border-right: 1px #ddd solid;
 }
+
+/*
+ * Images grid css configuration
+ */
+.flexible {
+  max-width: 100%;
+}
+/* IE6 support - 2% space for borders */
+* html .flexible { width: 100%; }
